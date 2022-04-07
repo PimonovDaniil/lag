@@ -36,6 +36,9 @@ im31 = Image.open('./video/31.gif')
 im36 = Image.open('./video/36.gif')
 im39 = Image.open('./video/39.gif')
 im40 = Image.open('./video/40.gif')
+im41 = Image.open('./video/41.gif')
+im42 = Image.open('./video/42.gif')
+im43 = Image.open('./video/43.gif')
 
 def thread_function2(name):
     root = tk.Tk()
@@ -98,9 +101,6 @@ def thread_function37(name):
     subprocess.Popen(['python', '37.py'])
 def thread_function38(name):
     subprocess.Popen(['python', '38.py'])
-
-
-
 
 # time.sleep(500)
 
@@ -434,3 +434,65 @@ x22.start()
 time.sleep(0.5)
 subprocess.Popen(['python', '23.py'])
 time.sleep(3)
+
+root = tk.Tk()
+root.geometry('340x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(500, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im41)
+root.mainloop()
+time.sleep(0.1)
+
+root = tk.Tk()
+root.geometry('340x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(500, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im42)
+root.mainloop()
+time.sleep(0.1)
+
+root = tk.Tk()
+root.geometry('340x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(500, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im41)
+root.mainloop()
+time.sleep(0.1)
+
+root = tk.Tk()
+root.geometry('340x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(500, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im42)
+root.mainloop()
+
+root = tk.Tk()
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 200
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 200
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(26000, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im43)
+root.mainloop()
