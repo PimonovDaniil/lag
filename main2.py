@@ -32,7 +32,7 @@ im24 = Image.open('./video/24.gif')
 im25 = Image.open('./video/25.gif')
 im26 = Image.open('./video/26.gif')
 im30 = Image.open('./video/30.gif')
-
+im31 = Image.open('./video/31.gif')
 
 def thread_function2(name):
     root = tk.Tk()
@@ -83,6 +83,20 @@ def thread_function30(name):
     subprocess.Popen(['python', '30.py'])
 def thread_function31(name):
     subprocess.Popen(['python', '31.py'])
+def thread_function32(name):
+    subprocess.Popen(['python', '32.py'])
+def thread_function33(name):
+    subprocess.Popen(['python', '33.py'])
+def thread_function34(name):
+    subprocess.Popen(['python', '34.py'])
+def thread_function35(name):
+    subprocess.Popen(['python', '35.py'])
+
+
+
+
+# time.sleep(500)
+
 
 x2 = threading.Thread(target=thread_functionSong, args=(1,))
 x2.start()
@@ -269,3 +283,29 @@ x30.start()
 x31 = threading.Thread(target=thread_function31, args=(1,))
 x31.start()
 time.sleep(6)
+
+root = tk.Tk()
+root.geometry('370x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(3000, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im31)
+root.mainloop()
+
+
+x32 = threading.Thread(target=thread_function32, args=(1,))
+x32.start()
+time.sleep(1)
+x33 = threading.Thread(target=thread_function33, args=(1,))
+x33.start()
+time.sleep(1)
+x34 = threading.Thread(target=thread_function34, args=(1,))
+x34.start()
+time.sleep(1)
+subprocess.Popen(['python', '35.py'])
+time.sleep(4)
+
