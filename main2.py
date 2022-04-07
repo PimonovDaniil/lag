@@ -6,7 +6,7 @@ import threading
 import ImageLabel
 import subprocess
 import pyglet
-import sys
+import os
 
 def thread_functionSong(name):
     #exec(open("audio.py").read())
@@ -31,7 +31,7 @@ im15 = Image.open('./video/15.gif')
 im24 = Image.open('./video/24.gif')
 im25 = Image.open('./video/25.gif')
 im26 = Image.open('./video/26.gif')
-
+im30 = Image.open('./video/30.gif')
 
 
 def thread_function2(name):
@@ -74,9 +74,16 @@ def thread_function22(name):
     subprocess.Popen(['python', '22.py'])
 def thread_function23(name):
     subprocess.Popen(['python', '23.py'])
+def thread_function27(name):
+    subprocess.Popen(['python', '27.py'])
+def thread_function28(name):
+    subprocess.Popen(['python', '28.py'])
+def thread_function29(name):
+    subprocess.Popen(['python', '29.py'])
+
 x2 = threading.Thread(target=thread_functionSong, args=(1,))
 x2.start()
-lagdelay = 300 #Рука
+lagdelay = 300  # Рука
 for i in range(2):
     root = tk.Tk()
     root.geometry('370x390')
@@ -144,7 +151,7 @@ x22.start()
 time.sleep(0.5)
 subprocess.Popen(['python', '23.py'])
 time.sleep(3)
-lagdelay = 350 #Прыжки
+lagdelay = 350  # Прыжки
 for i in range(1):
     root = tk.Tk()
     root.geometry('370x390')
@@ -194,10 +201,10 @@ for i in range(1):
     lbl.load(im4)
     root.mainloop()
 
-root = tk.Tk() #волосы
+root = tk.Tk()  # волосы
 root.geometry('340x390')
-x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 +400
-y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 +50
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 + 50
 root.wm_geometry("+%d+%d" % (x, y))
 root.after(3000, root.destroy)
 root.attributes("-topmost", True)
@@ -228,4 +235,27 @@ root.attributes("-topmost", True)
 lbl = ImageLabel.ImageLabel(root)
 lbl.pack()
 lbl.load(im26)
+root.mainloop()
+
+
+x27 = threading.Thread(target=thread_function27, args=(1,))
+x27.start()
+x28 = threading.Thread(target=thread_function28, args=(1,))
+x28.start()
+x29 = threading.Thread(target=thread_function29, args=(1,))
+x29.start()
+time.sleep(12)
+
+im27 = Image.open('./video/27.gif')
+lagdelay = 7500
+root = tk.Tk()
+root.geometry('180x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 200
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(lagdelay, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im30)
 root.mainloop()
