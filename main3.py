@@ -41,6 +41,10 @@ im42 = Image.open('./video/42.gif')
 im43 = Image.open('./video/43.gif')
 im44 = Image.open('./video/44.gif')
 im45 = Image.open('./video/45.gif')
+im46 = Image.open('./video/46.gif')
+im47 = Image.open('./video/47.gif')
+im48 = Image.open('./video/48.gif')
+im49 = Image.open('./video/49.gif')
 
 def thread_function2(name):
     root = tk.Tk()
@@ -103,6 +107,9 @@ def thread_function37(name):
     subprocess.Popen(['python', '37.py'])
 def thread_function38(name):
     subprocess.Popen(['python', '38.py'])
+
+
+
 
 # time.sleep(500)
 
@@ -311,4 +318,109 @@ root.attributes("-topmost", True)
 lbl = ImageLabel.ImageLabel(root)
 lbl.pack()
 lbl.load(im3)
+root.mainloop()
+
+# 41 лево
+# 42 право
+# 46 низ
+# 47 верх
+lagdelay3= 400
+for i in range(2):
+    root = tk.Tk()
+    root.geometry('340x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay3, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im41)
+    root.mainloop()
+
+
+    root = tk.Tk()
+    root.geometry('500x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 150
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay3, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im46)
+    root.mainloop()
+
+    root = tk.Tk()
+    root.geometry('340x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay3, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im42)
+    root.mainloop()
+
+    root = tk.Tk()
+    root.geometry('500x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 150
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 300
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay3, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im47)
+    root.mainloop()
+
+root = tk.Tk()
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 200
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 200
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(2800, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im48)
+root.mainloop()
+
+
+time.sleep(0.2)
+root = tk.Tk()
+root.geometry('370x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(500, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im)
+root.mainloop()
+
+time.sleep(0.1)
+root = tk.Tk()
+root.geometry('340x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(750, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im3)
+root.mainloop()
+
+
+root = tk.Tk()
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 200
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 200
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(10000, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im49)
 root.mainloop()
