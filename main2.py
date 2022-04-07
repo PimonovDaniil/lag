@@ -34,6 +34,8 @@ im26 = Image.open('./video/26.gif')
 im30 = Image.open('./video/30.gif')
 im31 = Image.open('./video/31.gif')
 im36 = Image.open('./video/36.gif')
+im39 = Image.open('./video/39.gif')
+im40 = Image.open('./video/40.gif')
 
 def thread_function2(name):
     root = tk.Tk()
@@ -369,3 +371,66 @@ x37.start()
 x38 = threading.Thread(target=thread_function38, args=(1,))
 x38.start()
 time.sleep(2.6)
+
+root = tk.Tk()
+root.geometry('500x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(400, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im39)
+root.mainloop()
+
+root = tk.Tk()
+root.geometry('400x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(3000, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im40)
+root.mainloop()
+
+lagdelay = 500  # Прыжки
+for i in range(2):
+    root = tk.Tk()
+    root.geometry('370x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im4)
+    root.mainloop()
+    time.sleep(0.33)
+    root = tk.Tk()
+    root.geometry('370x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im4)
+    root.mainloop()
+    time.sleep(0.3)
+
+x20 = threading.Thread(target=thread_function20, args=(1,))
+x20.start()
+time.sleep(0.5)
+x21 = threading.Thread(target=thread_function21, args=(1,))
+x21.start()
+time.sleep(0.5)
+x22 = threading.Thread(target=thread_function22, args=(1,))
+x22.start()
+time.sleep(0.5)
+subprocess.Popen(['python', '23.py'])
+time.sleep(3)
