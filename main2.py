@@ -490,9 +490,10 @@ root = tk.Tk()
 x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 200
 y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 200
 root.wm_geometry("+%d+%d" % (x, y))
-root.after(26000, root.destroy)
+root.after(29000, root.destroy) #27000
 root.attributes("-topmost", True)
 lbl = ImageLabel.ImageLabel(root)
 lbl.pack()
 lbl.load(im43)
 root.mainloop()
+
