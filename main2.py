@@ -49,7 +49,6 @@ def thread_function2(name):
 
 def thread_functionSong(name):
     subprocess.Popen(['python', 'audio3.py'])
-
 def thread_function6(name):
     subprocess.Popen(['python', '6.py'])
 def thread_function7(name):
@@ -80,6 +79,10 @@ def thread_function28(name):
     subprocess.Popen(['python', '28.py'])
 def thread_function29(name):
     subprocess.Popen(['python', '29.py'])
+def thread_function30(name):
+    subprocess.Popen(['python', '30.py'])
+def thread_function31(name):
+    subprocess.Popen(['python', '31.py'])
 
 x2 = threading.Thread(target=thread_functionSong, args=(1,))
 x2.start()
@@ -259,3 +262,10 @@ lbl = ImageLabel.ImageLabel(root)
 lbl.pack()
 lbl.load(im30)
 root.mainloop()
+
+
+x30 = threading.Thread(target=thread_function30, args=(1,))
+x30.start()
+x31 = threading.Thread(target=thread_function31, args=(1,))
+x31.start()
+time.sleep(6)
