@@ -33,6 +33,7 @@ im25 = Image.open('./video/25.gif')
 im26 = Image.open('./video/26.gif')
 im30 = Image.open('./video/30.gif')
 im31 = Image.open('./video/31.gif')
+im36 = Image.open('./video/36.gif')
 
 def thread_function2(name):
     root = tk.Tk()
@@ -91,6 +92,10 @@ def thread_function34(name):
     subprocess.Popen(['python', '34.py'])
 def thread_function35(name):
     subprocess.Popen(['python', '35.py'])
+def thread_function37(name):
+    subprocess.Popen(['python', '37.py'])
+def thread_function38(name):
+    subprocess.Popen(['python', '38.py'])
 
 
 
@@ -289,7 +294,7 @@ root.geometry('370x390')
 x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
 y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
 root.wm_geometry("+%d+%d" % (x, y))
-root.after(3000, root.destroy)
+root.after(2000, root.destroy)
 root.attributes("-topmost", True)
 lbl = ImageLabel.ImageLabel(root)
 lbl.pack()
@@ -299,13 +304,68 @@ root.mainloop()
 
 x32 = threading.Thread(target=thread_function32, args=(1,))
 x32.start()
-time.sleep(1)
+time.sleep(0.5)
 x33 = threading.Thread(target=thread_function33, args=(1,))
 x33.start()
-time.sleep(1)
+time.sleep(0.5)
 x34 = threading.Thread(target=thread_function34, args=(1,))
 x34.start()
-time.sleep(1)
+time.sleep(0.5)
 subprocess.Popen(['python', '35.py'])
-time.sleep(4)
+time.sleep(3)
 
+root = tk.Tk()
+root.geometry('350x390')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 500
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+root.wm_geometry("+%d+%d" % (x, y))
+root.after(2000, root.destroy)
+root.attributes("-topmost", True)
+lbl = ImageLabel.ImageLabel(root)
+lbl.pack()
+lbl.load(im36)
+root.mainloop()
+
+lagdelay = 350  # Прыжки
+for i in range(1):
+    root = tk.Tk()
+    root.geometry('370x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 200
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im4)
+    root.mainloop()
+
+    root = tk.Tk()
+    root.geometry('370x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 100
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im4)
+    root.mainloop()
+
+    root = tk.Tk()
+    root.geometry('370x390')
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 + 400
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2 - 100
+    root.wm_geometry("+%d+%d" % (x, y))
+    root.after(lagdelay, root.destroy)
+    root.attributes("-topmost", True)
+    lbl = ImageLabel.ImageLabel(root)
+    lbl.pack()
+    lbl.load(im4)
+    root.mainloop()
+
+x37 = threading.Thread(target=thread_function37, args=(1,))
+x37.start()
+x38 = threading.Thread(target=thread_function38, args=(1,))
+x38.start()
+time.sleep(2.6)

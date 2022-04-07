@@ -5,7 +5,7 @@ import ImageLabel
 
 
 im32 = Image.open('./video/32.gif')
-lagdelay = 4000
+lagdelay = 3000
 root = tk.Tk()
 root.geometry('180x390')
 x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2 - 300
