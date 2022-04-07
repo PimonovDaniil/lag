@@ -105,8 +105,8 @@ def thread_function38(name):
 # time.sleep(500)
 
 
-x2 = threading.Thread(target=thread_functionSong, args=(1,))
-x2.start()
+# x2 = threading.Thread(target=thread_functionSong, args=(1,))
+# x2.start()
 lagdelay = 300  # Рука
 for i in range(2):
     root = tk.Tk()
@@ -496,5 +496,7 @@ lbl = ImageLabel.ImageLabel(root)
 lbl.pack()
 lbl.load(im43)
 root.mainloop()
+
+subprocess.Popen(['python', 'main3.py'])
 
 

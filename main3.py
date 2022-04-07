@@ -114,8 +114,8 @@ def thread_function38(name):
 # time.sleep(500)
 
 
-x2 = threading.Thread(target=thread_functionSong, args=(1,))
-x2.start()
+# x2 = threading.Thread(target=thread_functionSong, args=(1,))
+# x2.start()
 
 lagdelay = 0.1
 x6 = threading.Thread(target=thread_function6, args=(1,))

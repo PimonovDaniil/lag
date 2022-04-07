@@ -1,42 +1,15 @@
-# from tkinter import *
-# import time
-# import threading
-# from tkinter import *
-# from tkvideo import tkvideo
-# from bvPlayer import bvPlayer
-#
-#
-# def thread_function(name):
-#     root = Tk()
-#     my_label = Label(root)
-#     my_label.pack()
-#     root.after(10000, root.destroy)
-#     root.attributes("-topmost", True)
-#     player = tkvideo("C:\\Users\\pimon\\PycharmProjects\\lag\\video\\1.mp4", my_label, size=(1280, 720))
-#     player.play()
-#     root.mainloop()
-#
-#
-# x = threading.Thread(target=thread_function, args=(1,))
-# x.start()
-# time.sleep(0.1)
-# # x = threading.Thread(target=thread_function, args=(1,))
-# # x.start()
-
-
+# Lagtrain
+# https://github.com/PimonovDaniil/lag
+# created by Pimonov Daniil
 
 import time
 import tkinter as tk
-from PIL import Image, ImageTk
-from itertools import count, cycle
+from PIL import Image
 import threading
 import ImageLabel
 import subprocess
-import pyglet
-import sys
 
 def thread_functionSong(name):
-    #exec(open("audio.py").read())
     subprocess.call("audio.exe")
 
 print("start")
@@ -765,5 +738,6 @@ lbl = ImageLabel.ImageLabel(root)
 lbl.pack()
 lbl.load(im5)
 root.mainloop()
-#subprocess.call('./2/2.exe')
-sys.exit()
+
+#TODO main 2
+subprocess.Popen(['python', 'main2.py'])
